@@ -26,6 +26,7 @@
         android:id = "@+id/play_button"
         android:text = "Play"
         android:fontFamily="casual"
+        android:textStyle="bold"
         android:background="@color/white"
         android:layout_width="70dp"
         android:layout_height="30dp"
