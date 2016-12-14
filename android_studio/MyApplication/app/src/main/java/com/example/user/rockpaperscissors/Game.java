@@ -9,34 +9,23 @@ import java.util.Random;
 public class Game {
     private String playerOption;
     private String computerOption;
-    private ArrayList<Integer>playerWins;
 
     public Game(String computerOption, String playerOption){
         this.computerOption = computerOption;
         this.playerOption = playerOption;
-        playerWins = new ArrayList<Integer>();
     }
 
     public String getPlayerOption(){
         return this.playerOption;
     }
 
-    public void addWinToPlayer(){
-        playerWins.add(1);
-    }
-
-    public int numberOfPlayerWins(){
-        return playerWins.size();
-    }
-
-
 
     public String getWinner(){
         if(this.computerOption == "Rock" && this.playerOption == "Scissors"){
-            return "Computer Wins!";
+            return "Computer Wins";
         }
         else if(this.computerOption == "Rock" && this.playerOption == "Paper"){
-            return "You Win!";
+            return "You Win";
         }
         else if(this.computerOption == "Rock" && this.playerOption == "Rock"){
             return "It's a Draw";
@@ -45,19 +34,19 @@ public class Game {
             return "It's a Draw";
         }
         else if (this.computerOption == "Paper" && this.playerOption == "Scissors"){
-            return "You Win!";
+            return "You Win";
         }
         else if (this.computerOption == "Paper" && this.playerOption == "Rock"){
-            return "Computer Wins!";
+            return "Computer Wins";
         }
         else if (this.computerOption == "Scissors" && this.playerOption== "Paper"){
-            return "Computer Wins!";
+            return "Computer Wins";
         }
         else if (this.computerOption == "Scissors" && this.playerOption == "Rock"){
-            return "You Win!";
+            return "You Win";
         }
         else if (this.computerOption == "Scissors" && this.playerOption == "Scissors"){
-            return "It's a Draw!";
+            return "It's a Draw";
         }
 
         return "enter valid option";

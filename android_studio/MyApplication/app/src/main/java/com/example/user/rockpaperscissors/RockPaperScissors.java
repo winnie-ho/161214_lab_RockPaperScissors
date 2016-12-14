@@ -34,19 +34,17 @@ public class RockPaperScissors extends AppCompatActivity {
         Game game = new Game(computerOption, playerOption);
         result.setText("Computer played: " + computerOption +"\n"+ game.getWinner());
 
-        if (game.getWinner() == "You Win!"){
+        if (game.getWinner() == "You Win"){
             PlayerWins++ ;
         }
-        else if (game.getWinner()== "Computer Wins!"){
+        else if (game.getWinner()== "Computer Wins"){
             ComputerWins++ ;
         }
         else if (game.getWinner()=="It's a Draw"){
             Draws++ ;
         }
         winCounts.setText("Computer Wins: " + ComputerWins+ "\nPlayer Wins: " + PlayerWins + "\nDraws: " + Draws);
-
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -61,7 +59,6 @@ public class RockPaperScissors extends AppCompatActivity {
         winCounts=(TextView)findViewById(R.id.winCount_text);
 
 
-
         rockButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -70,7 +67,6 @@ public class RockPaperScissors extends AppCompatActivity {
                 play(playerOption);
             }
         });
-
 
         paperButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -83,7 +79,6 @@ public class RockPaperScissors extends AppCompatActivity {
 
         });
 
-
         scissorsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -93,19 +88,6 @@ public class RockPaperScissors extends AppCompatActivity {
                 play(playerOption);
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-            }
-
-
     }
+}
 

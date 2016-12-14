@@ -8,11 +8,10 @@ import java.util.Random;
  */
 public class Computer {
     private ArrayList<String> choices;
-    private ArrayList<Integer>computerWins;
+
 
     public Computer(){
         choices = new ArrayList<String>();
-        computerWins = new ArrayList<Integer>();
         populateChoices();
     }
 
@@ -33,12 +32,5 @@ public class Computer {
         return randomChoice;
     }
 
-    public void addWinToComputer(){
-        computerWins.add(1);
-    }
-
-    public int numberOfComputerWins(){
-        return computerWins.size();
-    }
 
 }

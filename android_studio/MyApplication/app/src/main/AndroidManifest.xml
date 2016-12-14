@@ -16,7 +16,7 @@
 
         <activity
             android:name=".Welcome"
-            android:label="Welcome">
+            android:label="Rock Paper Scissors Intro">
         <intent-filter>
             <category android:name = "android.intent.category.LAUNCHER"/>
             <action android:name = "android.intent.action.MAIN"/>
